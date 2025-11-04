@@ -40,7 +40,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#fff7f3] to-[#fff2fb] flex items-center justify-center p-6 md:p-10 relative overflow-hidden">
-      {[...Array(15)].map((_, i) => (
+      {[...Array(40)].map((_, i) => (
         <div
           key={i}
           className="absolute text-2xl opacity-20 pointer-events-none animate-float-heart"
