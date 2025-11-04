@@ -59,7 +59,7 @@ const Index = () => {
           {wishes.map((wish, idx) => (
             <div
               key={idx}
-              className={`bg-gradient-to-br from-white/95 via-[#fff9fa]/95 to-[#fef5f8]/95 rounded-2xl p-6 min-h-[100px] flex items-center justify-center text-center shadow-[0_4px_12px_rgba(80,60,70,0.06)] border-2 border-[rgba(255,179,198,0.3)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(100,60,90,0.12)] hover:border-[rgba(255,134,168,0.6)] relative overflow-hidden group ${`
+              className={`bg-gradient-to-br from-white/95 via-[#fff9fa]/95 to-[#fef5f8]/95 rounded-2xl p-6 min-h-[100px] flex items-center justify-center text-center shadow-[0_4px_12px_rgba(80,60,70,0.06)] border-2 border-[rgba(255,179,198,0.3)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(100,60,90,0.12)] hover:border-[rgba(255,134,168,0.6)] relative overflow-hidden group ${
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
               }`}
               style={{
