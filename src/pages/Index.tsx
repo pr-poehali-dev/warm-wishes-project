@@ -46,48 +46,38 @@ const Index = () => {
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
         }`}
       >
-        <div className="absolute w-[220px] h-[220px] -left-10 -top-12 rounded-full bg-gradient-radial from-[#ffb3c6]/90 to-[#ff86a8]/45 blur-[36px] pointer-events-none" />
-        <div className="absolute w-[300px] h-[300px] -right-20 -bottom-20 rounded-full bg-gradient-radial from-[#ffe6f0]/90 to-[#ffc8dc]/35 blur-[36px] pointer-events-none" />
+        <div className="absolute w-[220px] h-[220px] -left-10 -top-12 rounded-full bg-gradient-radial from-[#ffb3c6]/90 to-[#ff86a8]/45 blur-[36px] pointer-events-none animate-color-shift" />
+        <div className="absolute w-[300px] h-[300px] -right-20 -bottom-20 rounded-full bg-gradient-radial from-[#ffe6f0]/90 to-[#ffc8dc]/35 blur-[36px] pointer-events-none animate-color-shift-delayed" />
 
-        <header className="flex items-center gap-4 mb-5 relative z-10">
-          <div className="w-[72px] h-[72px] rounded-2xl bg-gradient-to-b from-[#ffb3c6] to-[#ff86a8] flex items-center justify-center text-white font-bold text-[28px] shadow-[0_8px_20px_rgba(255,120,150,0.12)]">
-            КС
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold text-[#3b2d31] tracking-wide">
-              Тёплые пожелания и комплименты для Ксюши
-            </h1>
-            <p className="text-sm text-[#7a6f76] font-medium mt-1">
-              Мило, мягко и от всего сердца — каждый текст аккуратно центрован и красиво переносится.
-            </p>
-          </div>
+        <header className="flex items-center justify-center mb-8 relative z-10">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#3b2d31] tracking-wide">
+            Дорогой Ксюше
+          </h1>
         </header>
 
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px] mt-6 relative z-10">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
           {wishes.map((wish, idx) => (
             <div
               key={idx}
-              className={`bg-gradient-to-b from-white/95 to-[#fff9fa]/95 rounded-[18px] p-5 min-h-[88px] flex items-center justify-center text-center shadow-[0_6px_18px_rgba(80,60,70,0.04)] border border-[rgba(220,200,210,0.6)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(100,60,90,0.08)] relative overflow-hidden group ${
+              className={`bg-gradient-to-br from-white/95 via-[#fff9fa]/95 to-[#fef5f8]/95 rounded-2xl p-6 min-h-[100px] flex items-center justify-center text-center shadow-[0_4px_12px_rgba(80,60,70,0.06)] border-2 border-[rgba(255,179,198,0.3)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(100,60,90,0.12)] hover:border-[rgba(255,134,168,0.6)] relative overflow-hidden group ${`
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
               }`}
               style={{
-                transitionDelay: mounted ? `${Math.min(600 + idx * 40, 1600)}ms` : '0ms'
+                transitionDelay: mounted ? `${Math.min(100 + idx * 50, 1500)}ms` : '0ms'
               }}
             >
-              <p className="text-[15px] leading-relaxed text-[#2f2327] font-medium break-words hyphens-auto">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ffb3c6]/0 to-[#ff86a8]/0 group-hover:from-[#ffb3c6]/5 group-hover:to-[#ff86a8]/10 transition-all duration-500" />
+              <p className="text-[15px] leading-relaxed text-[#2f2327] font-medium break-words hyphens-auto relative z-10">
                 {wish}
               </p>
-              <span className="absolute right-2.5 top-2 text-lg text-[rgba(255,120,150,0.35)] -rotate-[15deg] transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105">
+              <span className="absolute right-3 top-3 text-xl text-[rgba(255,120,150,0.4)] -rotate-[15deg] transition-all duration-500 group-hover:rotate-0 group-hover:scale-110 group-hover:text-[rgba(255,120,150,0.7)]">
                 ♡
               </span>
             </div>
           ))}
         </section>
 
-        <footer className="mt-6 flex items-center justify-center gap-2 text-[13px] text-[#7a6f76] relative z-10">
-          <span>С любовью и теплом</span>
-          <span>— для Ксюши</span>
-        </footer>
+
       </main>
     </div>
   );

@@ -84,11 +84,23 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'color-shift': {
+					'0%, 100%': {
+						opacity: '0.9',
+						transform: 'scale(1)',
+					},
+					'50%': {
+						opacity: '0.7',
+						transform: 'scale(1.1)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'color-shift': 'color-shift 8s ease-in-out infinite',
+				'color-shift-delayed': 'color-shift 8s ease-in-out 4s infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
