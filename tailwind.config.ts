@@ -95,12 +95,27 @@ export default {
 						transform: 'scale(1.1)',
 					},
 				},
+				'float-heart': {
+					'0%': {
+						transform: 'translateY(0) translateX(0) rotate(0deg)',
+						opacity: '0.2',
+					},
+					'50%': {
+						transform: 'translateY(-30px) translateX(20px) rotate(10deg)',
+						opacity: '0.3',
+					},
+					'100%': {
+						transform: 'translateY(0) translateX(0) rotate(0deg)',
+						opacity: '0.2',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'color-shift': 'color-shift 8s ease-in-out infinite',
 				'color-shift-delayed': 'color-shift 8s ease-in-out 4s infinite',
+				'float-heart': 'float-heart 10s ease-in-out infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
